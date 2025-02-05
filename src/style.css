@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #222; /* Başlangıç arka plan rengi */
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.5s ease; /* Arka plan değişimi yumuşak olsun */
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.ball-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  background-color: #000; /* Top sabit siyah renkte */
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.ball:hover {
+  transform: scale(1.05);
+}
+
+.ball:active {
+  transform: scale(0.95);
+}
+
+.answer {
+  width: 90px;
+  height: 90px;
+  background-color: #fff; /* İç dairenin rengi sabit */
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Sallama animasyonu */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-5deg); }
+  40% { transform: rotate(5deg); }
+  60% { transform: rotate(-5deg); }
+  80% { transform: rotate(5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.shaking {
+  animation: shake 0.5s ease-in-out;
+}
+
+#response-text {
+  font-size: 18px;
+  margin-top: 10px;
+  font-style: italic;
+}

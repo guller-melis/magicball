@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic 8-Ball</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Magic 8 Ball</h1>
+    <p>Bir soru sor ve topa tıkla!</p>
+    <input type="text" id="question" placeholder="Sorunu buraya yaz..." />
+    <div class="ball-container">
+      <div class="ball" onclick="shakeBall()">
+        <div class="answer" id="answer">?</div>
+      </div>
+    </div>
+    <p id="response-text"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
